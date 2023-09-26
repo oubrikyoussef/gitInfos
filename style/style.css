@@ -244,12 +244,16 @@ form svg {
   form input[type="submit"] {
     padding-block: 0.6rem;
   }
+  .repo{
+    text-align: center;
+  }
   .repo h3 {
     font-size: 1.1rem;
+    word-break: break-all;
   }
   .repo .infos-actions {
     flex-direction: column;
-    gap: 10px;
+    gap: 8px;
   }
   .repo .clone {
     padding: 0.4rem 1rem;
