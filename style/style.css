@@ -179,7 +179,6 @@ form svg {
 .container .other-infos li.addresse::before {
   content: "\f601";
 }
-
 .repo .infos-actions {
   margin-top: 1rem;
   display: flex;
@@ -226,12 +225,10 @@ form svg {
   transform: translate(-50%, 100%);
   border: 5px solid;
   border-color: #0d69d5 transparent transparent transparent;
-  transition: 0.3s;
 }
 .repo a {
   color: inherit;
 }
-
 @media screen and (max-width: 470px) {
   form {
     flex-direction: column;
@@ -246,6 +243,28 @@ form svg {
   }
   form input[type="submit"] {
     padding-block: 0.6rem;
+  }
+  .repo h3 {
+    font-size: 1.1rem;
+  }
+  .repo .infos-actions {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .repo .clone {
+    padding: 0.4rem 1rem;
+  }
+  .repo .clone .methods {
+    left: 50%;
+    bottom: calc(-100% - 8px);
+    transform: translateX(-50%);
+  }
+  .repo .clone .methods::after {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    border: 5px solid;
+    border-color: transparent transparent #2b7bd6 transparent;
   }
 }
 @media screen and (max-width: 768px) {
