@@ -7,37 +7,42 @@ const loading = document.querySelector(".loading");
 
 cloneUrl();
 
+let displayedValue = null; 
+
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
     const enteredValue = searchInput.value.trim();
     if (enteredValue !== "") {
-        const isValid = validate(enteredValue);
-        if (isValid) {
-           clearError();
-           toggleLoading(true);
-            try{
-            const fetchedInfos = await fetchInfos(enteredValue);
-            const fetchedRepos = await fetchRepos(enteredValue);
+        if (enteredValue !== displayedValue) { // Check if enteredValue is different from displayedValue
+            const isValid = validate(enteredValue);
+            if (isValid) {
+                clearError();
+                toggleLoading(true);
+                try {
+                    const fetchedInfos = await fetchInfos(enteredValue);
+                    const fetchedRepos = await fetchRepos(enteredValue);
 
-            setGeneralInfos(fetchedInfos);
-            setReposInfos(fetchedRepos);
-            }
-            catch(error){
-                checkError(error);
-                toggleLoading(false);
-            }
-            setTimeout(()=>{
-                document.body.style.overflow = "scroll";
-                loading.style.display = "none";
-            },1100);
+                    setGeneralInfos(fetchedInfos);
+                    setReposInfos(fetchedRepos);
 
-        } else {
-            displayError("Please Enter A Valid Username");
-        }
+                    displayedValue = enteredValue; // Update displayedValue
+                } catch (error) {
+                    checkError(error);
+                    toggleLoading(false);
+                }
+                setTimeout(() => {
+                    document.body.style.overflow = "scroll";
+                    loading.style.display = "none";
+                }, 1100);
+            } else {
+                displayError("Please Enter A Valid Username");
+            }
+        } 
     } else {
         clearError();
     }
 });
+
 
 function validate(userName) {
     const maxCharNum = 39;
