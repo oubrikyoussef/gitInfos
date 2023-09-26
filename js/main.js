@@ -132,6 +132,8 @@ function setGeneralInfos(infos) {
 
 function setReposInfos(fetchedRepos) {
     repos.innerHTML = "";
+    repos.style.textAlign = "start";
+
     const fetchedReposNum = fetchedRepos.length;
     for (let i = 0; i < fetchedReposNum; i++) {
         const repo = document.createElement('div');
