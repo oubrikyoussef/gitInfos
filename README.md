@@ -1,6 +1,9 @@
 # GitHub User Info and Repository Viewer
 
 ![Image](https://github.com/oubrikyoussef/gitInfos/assets/133607377/6dab5629-5815-41ca-843e-49c9193ecba1.png)
+<div style="text-align: center;">
+  <img src="https://github.com/oubrikyoussef/gitInfos/assets/133607377/df5853c4-8d32-4570-a6bd-6a91402ac113" alt="Mobile Version Screenshot">
+</div>
 
 A web application that allows users to search for GitHub users, view their general information, and explore their repositories.
 
