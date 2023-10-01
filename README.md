@@ -7,8 +7,8 @@ A web application that allows users to search for GitHub users, view their gener
 
 ## Table of Contents
 
-- [Features](#features)
 - [Live Demo](#live-demo)
+- [Features](#features)
 - [Usage](#usage)
 - [Contributing](#contributing)
 - [Author](#author)
